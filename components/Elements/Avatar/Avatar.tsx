@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { classNames } from '../../helpers/methods'
 
 export type AvatarProps = {
@@ -77,7 +78,7 @@ const AvatarComponent: React.FC<AvatarProps> = ({
       onMouseLeave={onMouseLeave}
     >
       {src ? (
-        <img
+        <Image
           className={classNames(size, shape, 'content-center object-cover')}
           src={src}
           alt=""

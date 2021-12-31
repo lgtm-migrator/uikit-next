@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import { LayoutWrapper } from '../../src/layouts/LayoutWrapper'
 
 import { PageHeading, SidebarLayout, SidebarNavigation } from '../../components'
 import { NavigationItem } from '../../components/Elements/Navigation/NavigationItem'
 
 const SampleIcon = () => (
-  <img
+  <Image
     className="h-8 w-auto"
     src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
     alt="Workflow"

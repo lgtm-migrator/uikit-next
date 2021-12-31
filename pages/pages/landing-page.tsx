@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {
   ChatIcon,
   DeviceMobileIcon,
@@ -36,7 +37,7 @@ const LandingPage = () => {
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
             <div>
               <div>
-                <img
+                <Image
                   className="h-11 w-auto"
                   src="https://tailwindui.com/img/logos/workflow-mark.svg?color=rose&shade=500"
                   alt="Workflow"
@@ -173,7 +174,7 @@ const LandingPage = () => {
                 </svg>
               </div>
               <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
-                <img
+                <Image
                   className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
                   src="https://tailwindui.com/img/component-images/task-app-rose.jpg"
                   alt=""
@@ -263,7 +264,7 @@ const LandingPage = () => {
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0">
                 <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                  <img
+                  <Image
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                     src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
                     alt="Inbox user interface"
@@ -337,7 +338,7 @@ const LandingPage = () => {
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
                 <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                  <img
+                  <Image
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                     src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
                     alt="Customer profile user interface"

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import {
   CalendarIcon,
   ChartBarIcon,
@@ -12,7 +14,7 @@ import { NavigationItem } from '../../components/Elements/Navigation/NavigationI
 import { ComponentWrapper } from '../../src/layouts/ComponentWrapper'
 
 const SampleIcon = () => (
-  <img
+  <Image
     className="h-8 w-auto"
     src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
     alt="Workflow"
@@ -106,7 +108,7 @@ const SampleBottomSlot = () => {
     <Anchor to="/" className="shrink-0 w-full group block">
       <div className="flex items-center">
         <div>
-          <img
+          <Image
             className="inline-block h-9 w-9 rounded-full"
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""

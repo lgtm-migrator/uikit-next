@@ -1,4 +1,6 @@
 import { Fragment } from 'react'
+import Image from 'next/image'
+
 import { Popover, Transition } from '@headlessui/react'
 import {
   BookmarkAltIcon,
@@ -561,7 +563,7 @@ export const PricingPage = () => {
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <a href="#">
                   <span className="sr-only">Workflow</span>
-                  <img
+                  <Image
                     className="h-8 w-auto sm:h-10"
                     src="https://tailwindui.com/img/logos/workflow-mark-orange-400-to-pink-500-gradient.svg"
                     alt=""
@@ -634,7 +636,7 @@ export const PricingPage = () => {
                 <div className="pt-5 px-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <img
+                      <Image
                         className="h-8 w-auto"
                         src="https://tailwindui.com/img/logos/workflow-mark-orange-400-to-pink-500-gradient.svg"
                         alt="Workflow"
@@ -1032,7 +1034,7 @@ export const PricingPage = () => {
               </div>
             </div>
             <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
-              <img
+              <Image
                 className="translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
                 src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"
                 alt="App screenshot"

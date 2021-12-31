@@ -1,5 +1,7 @@
-import { DocumentIcon } from '@heroicons/react/outline'
 import React, { useEffect } from 'react'
+import Image from 'next/image'
+
+import { DocumentIcon } from '@heroicons/react/outline'
 import { classNames } from '../../helpers/methods'
 
 export type FilePreviewProps = {
@@ -51,7 +53,7 @@ const FilePreviewComponent: React.FC<FilePreviewProps> = ({
       }
     >
       {file.type.includes('image') ? (
-        <img
+        <Image
           className={imagePreviewClassNames}
           src=""
           alt={file.name}

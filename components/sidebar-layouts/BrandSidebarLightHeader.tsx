@@ -1,4 +1,6 @@
 import { Fragment, useState } from 'react'
+import Image from 'next/image'
+
 import { Dialog, Menu, Transition } from '@headlessui/react'
 
 import {
@@ -61,10 +63,10 @@ export const BrandSidebarLightHeader = () => {
           </Transition.Child>
           <Transition.Child
             as={Fragment}
-            enter="transition ease-in-out duration-300 transform"
+            enter="transition ease-in-out duration-300"
             enterFrom="-translate-x-full"
             enterTo="translate-x-0"
-            leave="transition ease-in-out duration-300 transform"
+            leave="transition ease-in-out duration-300"
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
@@ -90,7 +92,7 @@ export const BrandSidebarLightHeader = () => {
                 </div>
               </Transition.Child>
               <div className="shrink-0 flex items-center px-4">
-                <img
+                <Image
                   src="https://tailwindui.com/img/logos/workflow-logo-indigo-300-mark-white-text.svg"
                   alt="Workflow"
                   className="h-8 w-auto"
@@ -122,7 +124,7 @@ export const BrandSidebarLightHeader = () => {
                 <a href="#" className="shrink-0 group block">
                   <div className="flex items-center">
                     <div>
-                      <img
+                      <Image
                         className="inline-block h-10 w-10 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
@@ -153,7 +155,7 @@ export const BrandSidebarLightHeader = () => {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-col flex-grow pt-5 overflow-y-auto">
             <div className="flex items-center shrink-0 px-4">
-              <img
+              <Image
                 src="https://tailwindui.com/img/logos/workflow-logo-indigo-300-mark-white-text.svg"
                 alt="Workflow"
                 className="h-8 w-auto"
@@ -185,7 +187,7 @@ export const BrandSidebarLightHeader = () => {
               <a href="#" className="shrink-0 w-full group block">
                 <div className="flex items-center">
                   <div>
-                    <img
+                    <Image
                       className="inline-block h-9 w-9 rounded-full"
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
@@ -247,7 +249,7 @@ export const BrandSidebarLightHeader = () => {
                 <div>
                   <Menu.Button className="max-w-xs bg-indigo-600 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
                     <span className="sr-only">Open user menu</span>
-                    <img
+                    <Image
                       className="h-8 w-8 rounded-full"
                       src={user.imageUrl}
                       alt=""

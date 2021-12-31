@@ -1,4 +1,6 @@
 import { Fragment } from 'react'
+import Image from 'next/image'
+
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { classNames } from '../helpers/methods'
@@ -33,12 +35,12 @@ export const LightNavGrayBackground = () => {
               <div className="flex justify-between h-16">
                 <div className="flex">
                   <div className="shrink-0 flex items-center">
-                    <img
+                    <Image
                       className="block lg:hidden h-8 w-auto"
                       src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                       alt="Workflow"
                     />
-                    <img
+                    <Image
                       className="hidden lg:block h-8 w-auto"
                       src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                       alt="Workflow"
@@ -76,7 +78,7 @@ export const LightNavGrayBackground = () => {
                     <div>
                       <Menu.Button className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <span className="sr-only">Open user menu</span>
-                        <img
+                        <Image
                           className="w-8 h-8 rounded-full"
                           src={user.imageUrl}
                           alt=""
@@ -147,7 +149,7 @@ export const LightNavGrayBackground = () => {
               <div className="pt-4 pb-3 border-t border-gray-200">
                 <div className="flex items-center px-4">
                   <div className="shrink-0">
-                    <img
+                    <Image
                       className="h-10 w-10 rounded-full"
                       src={user.imageUrl}
                       alt=""

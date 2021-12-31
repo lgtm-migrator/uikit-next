@@ -1,11 +1,14 @@
+import { Fragment } from 'react'
+import Image from 'next/image'
+
+import { Menu, Transition } from '@headlessui/react'
+
+import { PlusSmIcon } from '@heroicons/react/solid'
+import { BellIcon } from '@heroicons/react/outline'
+
 import { Button, classNames, NavBar, TabNavigation } from '../../components'
 import StackedLayout from '../../components/layouts/StackedLayout/StackedLayout'
 import { LayoutWrapper } from '../../src/layouts/LayoutWrapper'
-
-import { PlusSmIcon } from '@heroicons/react/solid'
-import { Menu, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
-import { BellIcon } from '@heroicons/react/outline'
 
 const SampleActions = () => {
   return (
@@ -23,7 +26,7 @@ const SampleActions = () => {
         <div>
           <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
             <span className="sr-only">Open user menu</span>
-            <img
+            <Image
               className="h-8 w-8 rounded-full"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
               alt=""
@@ -88,12 +91,12 @@ const SampleActions = () => {
 
 const SampleIcon = () => (
   <>
-    <img
+    <Image
       className="block lg:hidden h-8 w-auto"
       src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
       alt="Workflow"
     />
-    <img
+    <Image
       className="hidden lg:block h-8 w-auto"
       src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
       alt="Workflow"
@@ -155,7 +158,7 @@ const SampleDisclosurePanel = () => {
       <div className="pt-4 pb-3 border-t border-gray-200">
         <div className="flex items-center px-4 sm:px-6">
           <div className="shrink-0">
-            <img
+            <Image
               className="h-10 w-10 rounded-full"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
               alt=""

@@ -1,4 +1,6 @@
 import { Fragment } from 'react'
+import Image from 'next/image'
+
 import { Popover, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { SearchIcon } from '@heroicons/react/solid'
@@ -36,7 +38,7 @@ export const TwoRowNavOverlap = () => {
                 <div className="absolute left-0 shrink-0 lg:static">
                   <a href="#">
                     <span className="sr-only">Workflow</span>
-                    <img
+                    <Image
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                       alt="Workflow"
@@ -59,7 +61,7 @@ export const TwoRowNavOverlap = () => {
                     <div>
                       <Menu.Button className="bg-white rounded-full flex text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100">
                         <span className="sr-only">Open user menu</span>
-                        <img
+                        <Image
                           className="h-8 w-8 rounded-full"
                           src={user.imageUrl}
                           alt=""
@@ -204,7 +206,7 @@ export const TwoRowNavOverlap = () => {
                       <div className="pt-3 pb-2">
                         <div className="flex items-center justify-between px-4">
                           <div>
-                            <img
+                            <Image
                               className="h-8 w-auto"
                               src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                               alt="Workflow"
@@ -253,7 +255,7 @@ export const TwoRowNavOverlap = () => {
                       <div className="pt-4 pb-2">
                         <div className="flex items-center px-5">
                           <div className="shrink-0">
-                            <img
+                            <Image
                               className="h-10 w-10 rounded-full"
                               src={user.imageUrl}
                               alt=""
