@@ -17,12 +17,14 @@ import {
 import { SearchIcon } from '@heroicons/react/solid'
 import { classNames } from '../helpers/methods'
 
+import LogoWhite from '../../src/assets/logo-white.svg'
+import FaceImg from '../../src/assets/face-1.jpeg'
+
 // MODEL
 const user = {
   name: 'Sergei Meza',
   email: 'contact@sergeimeza.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: FaceImg,
 }
 
 const navigation = [
@@ -92,11 +94,7 @@ export const DarkSidebarLightHeader = () => {
                 </div>
               </Transition.Child>
               <div className="shrink-0 flex items-center px-4">
-                <Image
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                  alt="Workflow"
-                />
+                <Image className="h-8 w-auto" src={LogoWhite} alt="Workflow" />
               </div>
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="px-2 space-y-1">
@@ -131,7 +129,7 @@ export const DarkSidebarLightHeader = () => {
                     <div>
                       <Image
                         className="inline-block h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src={FaceImg}
                         alt=""
                       />
                     </div>
@@ -160,11 +158,7 @@ export const DarkSidebarLightHeader = () => {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex-1 flex flex-col min-h-0">
             <div className="flex items-center h-16 shrink-0 px-4 bg-gray-900">
-              <Image
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                alt="Workflow"
-              />
+              <Image className="h-8 w-auto" src={LogoWhite} alt="Workflow" />
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
               <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">

@@ -6,12 +6,16 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { SearchIcon } from '@heroicons/react/solid'
 import { classNames } from '../helpers/methods'
 
+import Logo from '../../src/assets/logo.svg'
+
+import LogoWhite from '../../src/assets/logo-white.svg'
+import FaceImg from '../../src/assets/face-1.jpeg'
+
 // MODEL
 const user = {
   name: 'Sergei Meza',
   email: 'contact@sergeimeza.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: FaceImg,
 }
 
 const navigation = [
@@ -40,7 +44,7 @@ export const TwoRowNavOverlap = () => {
                     <span className="sr-only">Workflow</span>
                     <Image
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                      src={LogoWhite}
                       alt="Workflow"
                     />
                   </a>
@@ -208,7 +212,7 @@ export const TwoRowNavOverlap = () => {
                           <div>
                             <Image
                               className="h-8 w-auto"
-                              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                              src={Logo}
                               alt="Workflow"
                             />
                           </div>

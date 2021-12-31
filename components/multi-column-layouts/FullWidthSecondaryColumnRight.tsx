@@ -14,6 +14,8 @@ import {
 } from '@heroicons/react/outline'
 import { classNames } from '../helpers/methods'
 
+import Logo from '../../src/assets/logo.svg'
+
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
   { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
@@ -209,11 +211,7 @@ export const FullWidthSecondaryColumnRight = () => {
         <div className="lg:hidden">
           <div className="flex items-center justify-between bg-gray-50 border-b border-gray-200 px-4 py-1.5">
             <div>
-              <Image
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt="Workflow"
-              />
+              <Image className="h-8 w-auto" src={Logo} alt="Workflow" />
             </div>
             <div>
               <button

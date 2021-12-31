@@ -17,12 +17,14 @@ import {
 import { SearchIcon } from '@heroicons/react/solid'
 import { classNames } from '../helpers/methods'
 
+import LogoWhite from '../../src/assets/logo-white.svg'
+import FaceImg from '../../src/assets/face-1.jpeg'
+
 // MODEL
 const user = {
   name: 'Sergei Meza',
   email: 'contact@sergeimeza.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: FaceImg,
 }
 
 const navigation = [
@@ -92,11 +94,7 @@ export const BrandSidebarLightHeader = () => {
                 </div>
               </Transition.Child>
               <div className="shrink-0 flex items-center px-4">
-                <Image
-                  src="https://tailwindui.com/img/logos/workflow-logo-indigo-300-mark-white-text.svg"
-                  alt="Workflow"
-                  className="h-8 w-auto"
-                />
+                <Image src={LogoWhite} alt="Workflow" className="h-8 w-auto" />
               </div>
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="px-2 space-y-1">
@@ -126,7 +124,7 @@ export const BrandSidebarLightHeader = () => {
                     <div>
                       <Image
                         className="inline-block h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src={FaceImg}
                         alt=""
                       />
                     </div>
@@ -155,11 +153,7 @@ export const BrandSidebarLightHeader = () => {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-col flex-grow pt-5 overflow-y-auto">
             <div className="flex items-center shrink-0 px-4">
-              <Image
-                src="https://tailwindui.com/img/logos/workflow-logo-indigo-300-mark-white-text.svg"
-                alt="Workflow"
-                className="h-8 w-auto"
-              />
+              <Image src={LogoWhite} alt="Workflow" className="h-8 w-auto" />
             </div>
             <div className="mt-5 flex-1 flex flex-col">
               <nav className="flex-1 px-2 space-y-1">
@@ -189,7 +183,7 @@ export const BrandSidebarLightHeader = () => {
                   <div>
                     <Image
                       className="inline-block h-9 w-9 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      src={FaceImg}
                       alt=""
                     />
                   </div>

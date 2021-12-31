@@ -17,6 +17,8 @@ import {
   PageHeading,
 } from '../../components'
 
+import FaceImg from '../../src/assets/face-2.jpeg'
+
 const Back = () => {
   return (
     <nav className="sm:hidden" aria-label="Back">
@@ -102,8 +104,10 @@ const SampleHeadingTitle = () => {
         <div className="shrink-0">
           <div className="relative">
             <Image
-              className="h-16 w-16 rounded-full"
-              src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+              className="h-16 w-16 rounded-full object-cover"
+              width={64}
+              height={64}
+              src={FaceImg}
               alt=""
             />
             <span

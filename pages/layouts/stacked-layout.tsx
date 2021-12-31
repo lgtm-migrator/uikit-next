@@ -10,6 +10,11 @@ import { Button, classNames, NavBar, TabNavigation } from '../../components'
 import StackedLayout from '../../components/layouts/StackedLayout/StackedLayout'
 import { LayoutWrapper } from '../../src/layouts/LayoutWrapper'
 
+import Logo from '../../src/assets/logo.svg'
+import LogoText from '../../src/assets/logo-text.svg'
+
+import FaceImg from '../../src/assets/face-1.jpeg'
+
 const SampleActions = () => {
   return (
     <>
@@ -26,11 +31,7 @@ const SampleActions = () => {
         <div>
           <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
             <span className="sr-only">Open user menu</span>
-            <Image
-              className="h-8 w-8 rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
-            />
+            <Image className="h-8 w-8 rounded-full" src={FaceImg} alt="" />
           </Menu.Button>
         </div>
         <Transition
@@ -91,14 +92,10 @@ const SampleActions = () => {
 
 const SampleIcon = () => (
   <>
-    <Image
-      className="block lg:hidden h-8 w-auto"
-      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-      alt="Workflow"
-    />
+    <Image className="block lg:hidden h-8 w-auto" src={Logo} alt="Workflow" />
     <Image
       className="hidden lg:block h-8 w-auto"
-      src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+      src={LogoText}
       alt="Workflow"
     />
   </>
@@ -158,11 +155,7 @@ const SampleDisclosurePanel = () => {
       <div className="pt-4 pb-3 border-t border-gray-200">
         <div className="flex items-center px-4 sm:px-6">
           <div className="shrink-0">
-            <Image
-              className="h-10 w-10 rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
-            />
+            <Image className="h-10 w-10 rounded-full" src={FaceImg} alt="" />
           </div>
           <div className="ml-3">
             <div className="text-base font-medium text-gray-800">Tom Cook</div>

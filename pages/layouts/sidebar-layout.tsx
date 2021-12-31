@@ -4,12 +4,10 @@ import { LayoutWrapper } from '../../src/layouts/LayoutWrapper'
 import { PageHeading, SidebarLayout, SidebarNavigation } from '../../components'
 import { NavigationItem } from '../../components/Elements/Navigation/NavigationItem'
 
+import LogoText from '../../src/assets/logo-text.svg'
+
 const SampleIcon = () => (
-  <Image
-    className="h-8 w-auto"
-    src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-    alt="Workflow"
-  />
+  <Image className="h-8 w-auto" src={LogoText} alt="Workflow" />
 )
 
 const sampleNavigation2: NavigationItem[] = [

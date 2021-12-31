@@ -9,7 +9,7 @@ export type AvatarProps = {
   notificationBadgeSize?: NotificationBadgeSize
   notificationBadgeColor?: NotificationBadgeColor
   notificationBadgePosition?: NotificationBadgePosition
-  src?: string
+  src?: string | StaticImageData
   onClick?: () => void // TODO: Deprecate
   onMouseEnter?: () => void // TODO: Deprecate
   onMouseLeave?: () => void // TODO: Deprecate
@@ -78,11 +78,14 @@ const AvatarComponent: React.FC<AvatarProps> = ({
       onMouseLeave={onMouseLeave}
     >
       {src ? (
-        <Image
-          className={classNames(size, shape, 'content-center object-cover')}
-          src={src}
-          alt=""
-        />
+        <div className={classNames(size)}>
+          <Image
+            className={classNames(size, shape, 'content-center object-cover')}
+            src={src}
+            layout="fill"
+            alt=""
+          />
+        </div>
       ) : (
         <span
           className={classNames(
