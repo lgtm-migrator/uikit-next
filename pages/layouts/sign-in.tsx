@@ -1,9 +1,7 @@
-import React from 'react'
-
 import { LayoutWrapper } from '../../src/layouts/LayoutWrapper'
 import SignInLayout from '../../src/layouts/SignInLayout/SignInLayout'
 
-const SignInLayoutPreview: React.FC<any> = () => {
+const SignInLayoutPreview = () => {
   return (
     <LayoutWrapper
       layout={{
