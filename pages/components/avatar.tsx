@@ -155,7 +155,6 @@ enum NotificationBadgePosition {
         <div>
           <Avatar
             src={imgSrc}
-            layout="fill"
             shape={Avatar.shape.default}
             size={Avatar.size.xxxl}
           />

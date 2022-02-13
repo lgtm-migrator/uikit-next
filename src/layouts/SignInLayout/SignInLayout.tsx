@@ -6,7 +6,7 @@ import * as yup from 'yup'
 
 import { Button, Divider, Input } from '../../../components'
 
-import Logo from '../../src/assets/logo.svg'
+import Logo from '../../../src/assets/logo.svg'
 
 type SignInFormData = {
   email: string

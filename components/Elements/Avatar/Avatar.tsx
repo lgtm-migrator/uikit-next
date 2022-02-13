@@ -9,7 +9,7 @@ export type AvatarProps = {
   notificationBadgeSize?: NotificationBadgeSize
   notificationBadgeColor?: NotificationBadgeColor
   notificationBadgePosition?: NotificationBadgePosition
-  src?: string | StaticImageData
+  src?: any
   onClick?: () => void // TODO: Deprecate
   onMouseEnter?: () => void // TODO: Deprecate
   onMouseLeave?: () => void // TODO: Deprecate
