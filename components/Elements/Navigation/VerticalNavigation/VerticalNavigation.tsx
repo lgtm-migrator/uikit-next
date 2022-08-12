@@ -37,19 +37,19 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
     setNavItems(_navItems)
     onItemSelected(_navItems[index])
   }
-
   return (
     <nav aria-label="Sidebar">
       <div className="space-y-1">
-        {navItems.map((item) =>
-          !item.children ? (
+        {navItems.map((item) => {
+          const current = router.asPath === item.to
+          return !item.children ? (
             <Anchor
               to={item.to}
               href={item.href}
               key={item.name}
-              aria-current={item.current ? 'page' : undefined}
+              aria-current={current ? 'page' : undefined}
               className={classNames(
-                item.current
+                current
                   ? 'bg-primary-100 text-primary-900'
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
                 'w-full group flex items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500',
@@ -58,7 +58,7 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
               {showIcons && item.icon && (
                 <item.icon
                   className={classNames(
-                    item.current
+                    current
                       ? 'text-primary-500'
                       : 'text-gray-400 group-hover:text-gray-500',
                     'shrink-0 -ml-1 mr-3 h-6 w-6',
@@ -70,7 +70,7 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
               {item.count ? (
                 <span
                   className={classNames(
-                    item.current
+                    current
                       ? 'bg-white'
                       : 'bg-gray-100 group-hover:bg-gray-200',
                     'ml-auto inline-block py-0.5 px-3 text-xs rounded-full',
@@ -84,14 +84,14 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
             <Disclosure
               as="div"
               key={item.name}
-              defaultOpen={item.current}
+              defaultOpen={current}
               className="space-y-1"
             >
               {({ open }) => (
                 <>
                   <Disclosure.Button
                     className={classNames(
-                      item.current
+                      current
                         ? 'bg-gray-100 text-gray-900'
                         : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
                       'group w-full flex items-center pr-2 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500',
@@ -129,8 +129,8 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
                 </>
               )}
             </Disclosure>
-          ),
-        )}
+          )
+        })}
       </div>
       {secondaryItems && secondaryItems.length > 0 && (
         <div className="mt-8">

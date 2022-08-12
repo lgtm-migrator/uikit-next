@@ -13,9 +13,9 @@ import {
   InboxIcon,
 } from '@heroicons/react/outline'
 
-import { TabNavigation, VerticalNavigation } from '../../components'
-import { NavigationItem } from '../../components/Elements/Navigation/NavigationItem'
-import { ComponentWrapper } from '../../src/layouts/ComponentWrapper'
+import { TabNavigation, VerticalNavigation } from '../../../components'
+import { NavigationItem } from '../../../components/Elements/Navigation/NavigationItem'
+import { ComponentWrapper } from '../../../src/layouts/ComponentWrapper'
 
 const sampleNavigation: NavigationItem[] = [
   {
@@ -27,27 +27,27 @@ const sampleNavigation: NavigationItem[] = [
   },
   {
     name: 'Projects',
-    to: '/components/navigation#1',
+    to: '/components/navigation/projects',
     icon: FolderIcon,
     current: false,
     count: '19',
   },
   {
     name: 'Calendar',
-    to: '/components/navigation#2',
+    to: '/components/navigation/calendar',
     icon: CalendarIcon,
     current: false,
     count: '20+',
   },
   {
     name: 'Documents',
-    to: '/components/navigation#3',
+    to: '/components/navigation/documents',
     icon: InboxIcon,
     current: false,
   },
   {
     name: 'Reports',
-    to: '/components/navigation#4',
+    to: '/components/navigation/reports',
     icon: ChartBarIcon,
     current: false,
   },
