@@ -32,7 +32,7 @@ const SidebarLayoutComponent: React.FC<SidebarLayoutProps> = ({
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 flex z-40 md:hidden"
+          className="fixed inset-0 flex z-40 lg:hidden"
           onClose={setSidebarOpen}
         >
           {/* overlay */}
@@ -91,7 +91,7 @@ const SidebarLayoutComponent: React.FC<SidebarLayoutProps> = ({
       </Transition.Root>
 
       {/* Static sidebar for desktop */}
-      <div className="hidden md:flex md:shrink-0">
+      <div className="hidden lg:flex lg:shrink-0">
         <div className="flex flex-col w-64">
           {/* Sidebar component */}
           {sidebarNavigation}
