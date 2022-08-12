@@ -32,7 +32,7 @@ const SidebarLayoutComponent: React.FC<SidebarLayoutProps> = ({
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 flex z-40 lg:hidden"
+          className="fixed inset-0 flex z-40 md:hidden"
           onClose={setSidebarOpen}
         >
           {/* overlay */}
@@ -91,7 +91,7 @@ const SidebarLayoutComponent: React.FC<SidebarLayoutProps> = ({
       </Transition.Root>
 
       {/* Static sidebar for desktop */}
-      <div className="hidden lg:flex lg:shrink-0">
+      <div className="hidden md:flex md:shrink-0">
         <div className="flex flex-col w-64">
           {/* Sidebar component */}
           {sidebarNavigation}
@@ -101,7 +101,7 @@ const SidebarLayoutComponent: React.FC<SidebarLayoutProps> = ({
         <div className="relative z-10 shrink-0 flex h-16 bg-white shadow">
           <button
             type="button"
-            className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 lg:hidden"
+            className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 md:hidden"
             onClick={() => setSidebarOpen(true)}
           >
             <span className="sr-only">Open sidebar</span>
@@ -113,10 +113,10 @@ const SidebarLayoutComponent: React.FC<SidebarLayoutProps> = ({
 
         <main className="flex-1 relative overflow-y-auto focus:outline-none">
           <div className="py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               <h1 className="text-2xl font-semibold text-gray-900">{title}</h1>
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               {children ?? (
                 <div className="py-4">
                   <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" />
