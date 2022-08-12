@@ -1,13 +1,9 @@
-import React from 'react'
-
 export type NavigationItem = {
   name: string
-  href?: string
-  to?: string
-  icon?: React.FC<any>
+  to: string
+  icon?: JSX.Element
   count?: string | number
-  children?: { name: string; href?: string; to?: string }[]
-  current: boolean
+  children?: { name: string; to: string }[]
 }
 
 export type StepsNavigationItem = {

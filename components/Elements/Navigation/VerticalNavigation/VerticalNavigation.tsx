@@ -20,32 +20,22 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
   secondaryNavigationTitle = undefined,
   secondaryItems = undefined,
   showIcons = true,
-  onItemSelected = (item) => console.log('item selected:', item.name),
 }) => {
   const router = useRouter()
   const { pathname } = router
 
   // memo or state
 
-  const [navItems, setNavItems] = useState<any[]>(items.slice())
+  const [navItems] = useState<NavigationItem[]>(items.slice())
 
-  function handleItemChange(value: string) {
-    let _navItems = navItems.slice()
-    _navItems = _navItems.map((e) => ({ ...e, current: false }))
-    let index = _navItems.findIndex((i) => i.name === value)
-    _navItems[index].current = true
-    setNavItems(_navItems)
-    onItemSelected(_navItems[index])
-  }
   return (
     <nav aria-label="Sidebar">
       <div className="space-y-1">
         {navItems.map((item) => {
-          const current = router.asPath === item.to
+          const current = router.pathname.includes(item.to)
           return !item.children ? (
             <Anchor
               to={item.to}
-              href={item.href}
               key={item.name}
               aria-current={current ? 'page' : undefined}
               className={classNames(
@@ -55,17 +45,7 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
                 'w-full group flex items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500',
               )}
             >
-              {showIcons && item.icon && (
-                <item.icon
-                  className={classNames(
-                    current
-                      ? 'text-primary-500'
-                      : 'text-gray-400 group-hover:text-gray-500',
-                    'shrink-0 -ml-1 mr-3 h-6 w-6',
-                  )}
-                  aria-hidden="true"
-                />
-              )}
+              {showIcons && item.icon && item.icon}
               <span className="truncate">{item.name}</span>
               {item.count ? (
                 <span
@@ -110,13 +90,12 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
                     {item.name}
                   </Disclosure.Button>
                   <Disclosure.Panel className="space-y-1">
-                    {item.children.map((subItem) => (
+                    {item.children?.map((subItem) => (
                       <Anchor
                         key={subItem.name}
                         to={subItem.to}
-                        href={subItem.href}
                         className={classNames(
-                          subItem.href === router.pathname.split('?')[0]
+                          subItem.to === router.pathname
                             ? 'bg-primary-100 text-primary-900'
                             : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
                           'group w-full  flex items-center pl-10 pr-2 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500',
@@ -147,7 +126,6 @@ const VerticalNavigationComponent: React.FC<VerticalNavigationProps> = ({
               <Anchor
                 key={item.name}
                 to={item.to}
-                href={item.href}
                 className={classNames(
                   'w-full group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md',
                   'hover:text-gray-900 hover:bg-gray-50',
