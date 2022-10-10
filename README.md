@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Versatil and beautiful UI toolkit library designed to integrate with Next.js and Tailwind CSS.
+  Versatil and beautiful UI toolkit library designed to integrate with `Next.js` applications using `Tailwind CSS`.
 </p>
 
 <div align="center">
